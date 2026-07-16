@@ -31,7 +31,29 @@
             loadComponents('whitesection', 'src/sections/whitesection.html');
             loadComponents('contact', 'src/sections/contact.html');
             loadComponents('footer', 'src/sections/footer.html');
+            
+            setTimeout(() => {
+                // 1. Find the button and the menu in the HTML
+                const menuBtn = document.getElementById('menu-btn');
+                const mobileMenu = document.getElementById('mobile-menu');
+
+                // 2. Listen for a click on the button
+                menuBtn.addEventListener('click', () => {
+                    
+                    // 3. Toggle the "hidden" class on the menu
+                    mobileMenu.classList.toggle('hidden');
+                    
+                    // 4. Change the image (Hamburger vs X)
+                    if (mobileMenu.classList.contains('hidden')) {
+                        menuBtn.src = "images/menu.png"; // Menu is closed
+                    } else {
+                        menuBtn.src = "images/cross.png"; // Menu is open! (Make sure you have a close.png image)
+                    }
+                });
+            }, 500); // Waits half a second for the header to load first
+            // --- END OF NEW JAVASCRIPT ---
         }
+
     </script>
 </body>
 </html>
