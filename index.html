@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./dist/output.css">
     <title>Website project template</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <div id="header"></div>
     <div id="hero"></div>
     <div id="whitesection"></div>
-    <div id="contact"></div>
     <div id="footer"></div>
 
     <script>
         const loadComponents = (id, url) => {
             fetch(url)
-            .then((response) => response.text())
-            .then((html) => {
-                document.getElementById(id).innerHTML = html;
-            });
+                .then((response) => response.text())
+                .then((html) => {
+                    document.getElementById(id).innerHTML = html;
+                });
         }
 
         window.onload = () => {
@@ -30,7 +33,7 @@
             loadComponents('hero', 'src/sections/hero.html');
             loadComponents('whitesection', 'src/sections/whitesection.html');
             loadComponents('footer', 'src/sections/footer.html');
-            
+
             setTimeout(() => {
                 // 1. Find the button and the menu in the HTML
                 const menuBtn = document.getElementById('menu-btn');
@@ -38,10 +41,10 @@
 
                 // 2. Listen for a click on the button
                 menuBtn.addEventListener('click', () => {
-                    
+
                     // 3. Toggle the "hidden" class on the menu
                     mobileMenu.classList.toggle('hidden');
-                    
+
                     // 4. Change the image (Hamburger vs X)
                     if (mobileMenu.classList.contains('hidden')) {
                         menuBtn.src = "images/menu.png"; // Menu is closed
@@ -54,5 +57,28 @@
         }
 
     </script>
+
+    <script>
+        setTimeout(() => {
+            const img = document.getElementById('smallyellow-img');
+            const placeholder = document.getElementById('smallyellow-placeholder');
+            const sentinel = document.createElement('div');
+            img.parentNode.insertBefore(sentinel, img);
+
+            const observer = new IntersectionObserver(([entry]) => {
+                const scrolledPast = entry.boundingClientRect.top < 0;
+                if (scrolledPast) {
+                    img.classList.add('fixed', 'top-4', 'left-1/2', '-translate-x-1/2', 'z-[900]');
+                    placeholder.classList.remove('invisible');
+                } else {
+                    img.classList.remove('fixed', 'top-4', 'left-1/2', '-translate-x-1/2', 'z-[900]');
+                    placeholder.classList.add('invisible');
+                }
+            }, { threshold: 0 });
+
+            observer.observe(sentinel);
+        }, 600); // waits for hero/whitesection to load first
+    </script>
 </body>
+
 </html>
