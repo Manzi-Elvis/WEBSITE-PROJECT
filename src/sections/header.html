@@ -1,32 +1,61 @@
-<header class="text-[48px] font-[outfit] bg-[#EFECEA] font-bold   px-5  lg:h-[120px] lg:pt-4  w-screen">
-  <nav class=" flex justify-between items-center lg:flex lg:items-center ">
-    <div class=" ">
-      <ul class="text-[15px] font-normal ">
-        <li>De</li>
-        <li>En</li>
+<header
+  id="site-header"
+  class="fixed top-0 left-0 z-50 w-full py-10 lg:block lg:top-5 lg:py-0
+         text-[32px] font-[outfit] font-bold
+         h-[100px] md:h-[140px] lg:h-[104px]
+         flex items-center px-5 md:px-5 "
+>
+  <nav class="flex items-center justify-between w-full max-w-[1440px] mx-auto lg:text-[32px] lg:flex lg:items-start">
+    
+
+    <div class="h-[48px] w-[32px] z-20">
+      <ul class="text-[15px] font-light md:text-[24px]">
+        <li class="w-[32px] h-[26px] block md:w-[41px] md:h-[35px] lg:block lg:w-[26px] lg:h-[26px]">DE</li>
+        <li class="w-[32px] h-[26px] block md:w-[41px] md:h-[35px] lg:block lg:w-[26px] lg:h-[26px]">EN</li>
       </ul>
     </div>
-    <div class=" flex  items-start lg:text-[48px] ">
-      <h1> Baumeister</h1>
+
+
+    <div class="flex-1 flex justify-center items-center z-20 relative">
+      <img src="images/whites.png" alt="" class=" w-[194px] h-[50px]  absolute -z-10 block md:hidden" >
+      <h1 class="text-[36px] md:text-[48px] font-semibold">Baumeister</h1>
     </div>
-    <div  class="lg:hidden cursor-pointer">
-      <img src="images/menu.png" alt="" class="  w-[39px] h-[23px]" id="menu-btn">
+
+
+    <div class="lg:hidden cursor-pointer z-20">
+      <img
+        src="images/menu.png"
+        alt="menu"
+        class="w-[39px] h-[23px] md:w-[63px] md:h-[37px]"
+        id="menu-btn"
+      />
     </div>
-   <div class="hidden lg:block md:text-[15px] md:font-normal md:w-[124px] h-[104px] lg:text-[15px] ">
-          <ul class="md: text-right">
-           <a href=""><li> About</li></a> 
-            <a href=""><li> Services</li></a>
-            <a href=""><li> Reference</li></a>
-            <a href=""><li> Contact</li></a>
-          </ul>
-   </div>
+
+
+    <div class="hidden lg:block lg:text-[24px] lg:h-[104] lg:[204px]">
+      <ul class="font-normal  ">
+        <li class="h-[26px]"><a href="">About</a></li>
+        <li class="h-[26px]"><a href="">Services</a></li>
+        <li class="h-[26px]"><a href="">Reference</a></li>
+        <li class="h-[26px]"><a href="">Contact</a></li>
+      </ul>
+    </div>
   </nav>
-  <div class=" hidden justify-center items-center text-center text-green-900 lg:hidden text-[24px] md:text-[48px]" id="mobile-menu">
-    <ul>
-      <a href=""> <li>About</li></a>
-      <a href=""> <li>Services</li></a>
-      <a href=""> <li>References</li></a>
-      <a href=""> <li>Contact</li></a>
+
+
+  <div
+    class="hidden justify-center items-center text-center text-green-900
+           lg:hidden text-[24px] md:text-[48px] h-[404px] md:my-12
+           absolute top-full left-0 w-full "
+    id="mobile-menu"
+  >
+    <ul class="h-full flex flex-col justify-around items-center text-[32px] font-semibold  lg:text-[25px] mt-16">
+      <li><a href="">About</a></li>
+      <li><a href="">Services</a></li>
+      <li><a href="">References</a></li>
+      <li><a href="">Contact</a></li>
     </ul>
   </div>
 </header>
+
+<div class="h-[100px] md:h-[140px] lg:h-[154px]"></div>
