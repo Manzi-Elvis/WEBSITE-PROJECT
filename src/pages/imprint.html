@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Baumeister | Imprint</title>
-
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-<style type="text/tailwindcss">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baumeister | Imprint</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>  
+</head>
+<body class="bg-[#EFECEA]">
+  <style type="text/tailwindcss">
   @theme {
     --font-sans: "Outfit";
     --text-medium: 32px;
@@ -20,169 +23,23 @@
     }
   }
 </style>
+<script>
+        const loadComponents = (id, url) => {
+            fetch(url)
+            .then((response) => response.text())
+            .then((html) => {
+                document.getElementById(id).innerHTML = html;
+            });
+        }
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
-
-<style>
-  html, body { font-family: "Outfit", sans-serif; }
-</style>
-</head>
-<body class="bg-background text-darkgreen relative">
-
-  <header id="header" class="text-sm sticky top-0 z-30 flex justify-between items-center lg:items-start py-4.5 md:py-7 px-4 md:px-8.5 pt-12 md:pt-7 lg:pt-8 bg-background">
-    <div class="flex flex-col leading-tight text-lg lg:text-2xl">
-      <span>DE</span>
-      <span>EN</span>
-    </div>
-    <div class="text-3xl md:text-5xl font-semibold lg:mt-3 z-40 relative">
-      <svg class="-z-30 w-48.5 h-12.5 md:hidden" viewBox="0 0 194 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M5.74114 5.43032L0 31.0304L27.6246 50L172.026 46.7662L194 31.671L182.886 13.1431L145.069 0L5.74114 5.43032Z" fill="#EFECEA"/>
-      </svg>
-      <div class="absolute inset-0 flex items-center justify-center">
-        <a href="index.html">Baumeister</a>
-      </div>
-    </div>
-    <nav class="hidden lg:flex flex-col leading-none text-2xl items-end">
-      <ul>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="index.html#references">References</a></li>
-        <li><a href="index.html#footer">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="cursor-pointer h-12 w-16 lg:hidden">
-      <svg id="menu-open" class="w-full h-full fill-current" width="39" height="23" viewBox="0 0 39 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1.10811 2.11842L0 12.1053L8.64865 21.3493L31.5135 23L39 12.0227L28 0L1.10811 2.11842Z"/>
-        <line x1="10" y1="6" x2="26" y2="6" stroke="#EFECEA" stroke-width="2"/>
-        <line x1="10" y1="11" x2="26" y2="11" stroke="#EFECEA" stroke-width="2"/>
-        <line x1="10" y1="16" x2="26" y2="16" stroke="#EFECEA" stroke-width="2"/>
-      </svg>
-    </div>
-
-    <div id="mobile-menu" class="fixed top-0 right-0 left-0 h-full w-full transform translate-x-full lg:hidden transition-transform duration-400 ease-in-out bg-background z-40">
-      <div class="flex justify-between py-4.5 md:py-7 px-4 md:px-8.5 pt-12 md:pt-7 lg:pt-4 items-center">
-        <div class="flex flex-col leading-tight text-lg lg:text-2xl">
-          <span>DE</span>
-          <span>EN</span>
-        </div>
-        <div class="flex text-3xl md:text-5xl font-semibold lg:mt-3 relative">
-          <a href="index.html" class="absolute inset-0 flex items-center justify-center">Baumeister</a>
-        </div>
-        <div class="cursor-pointer h-12 w-16 lg:hidden">
-          <svg id="menu-close" class="hidden w-full h-full relative -top-1 fill-current" width="64" height="46" viewBox="0 0 64 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1.80534 11.4513L0 27.722L14.0904 42.7824L51.342 45.4718L63.5391 27.5875L45.6178 8L1.80534 11.4513Z"/>
-            <path d="M34.608 36L29.28 28.512L28.668 27.936L21.936 18.9H25.86L30.72 25.56L31.332 26.064L38.532 36H34.608ZM21.612 36L28.668 26.496L30.504 28.872L25.428 36H21.612ZM31.584 27.9L29.712 25.596L34.428 18.9H38.208L31.584 27.9Z" fill="white"/>
-          </svg>
-        </div>
-      </div>
-      <ul id="menu-links" class="font-semibold flex flex-col gap-10 md:gap-12 px-6 text-darkgreen text-center text-medium md:text-5xl mt-22.5 md:mt-30 md:-translate-y-20">
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="index.html#references">References</a></li>
-        <li><a href="index.html#footer">Contact</a></li>
-      </ul>
-    </div>
-  </header>
-
-  <main class="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-9 md:gap-x-5 lg:gap-6 mt-23 px-4.5 md:pl-14 md:pr-16.25 lg:px-49.75 text-2xl text-darkgreen">
-    <section class="space-y-8 md:text-3xl lg:text-5xl lg:col-span-6 md:col-span-7 md:leading-[1.30] lg:leading-tight">
-      <div>
-        <h1 class="font-bold text-2xl md:text-xl lg:text-2xl">IMPRINT</h1>
-      </div>
-      <div>
-        <h2 class="font-bold text-medium">Agentur Baumeister</h2>
-        <p>Katrein Baumeister</p>
-        <p>Böckhstraße 13</p>
-        <p>10967 Berlin</p>
-      </div>
-      <div>
-        <p>+49 (0)30 - 490 827 87</p>
-        <p>hallo@agentur-baumeister.com</p>
-      </div>
-      <div>
-        <h2 class="font-bold text-medium">UST-IDNR.</h2>
-        <p>DE 274 486 923</p>
-      </div>
-      <div>
-        <h2 class="font-bold text-medium">REGISTERED OFFICE</h2>
-        <p>Berlin, Germany</p>
-      </div>
-    </section>
-    <section class="mt-24 md:mt-0 lg:mt-0 space-y-6 text-2xl md:text-xl lg:text-2xl md:self-end md:text-right lg:p-0 lg:col-span-3 md:col-span-5">
-      <h1 class="font-bold">DISCLAIMER</h1>
-      <p>
-        Despite all due care, no liability can be accepted for the accuracy,
-        completeness and up-to-dateness of the information provided. The same
-        applies to third-party websites to which www.agentur-baumeister.com
-        refers by means of hyperlinks. Katrein Baumeister, Agentur Baumeister
-        accepts no liability for the content of these websites.
-      </p>
-    </section>
-  </main>
-
-  <footer class="mt-10 md:mt-32 lg:mt-44 space-y-28 text-darkgreen">
-    <div class="flex justify-center">
-      <svg class="w-80 md:w-sm md:h-61.25 lg:w-2xl lg:h-96 hidden md:block" viewBox="0 0 299 173" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M9.38565 16.1011L0.924896 91.0098L66.9601 160.347L241.541 172.728L298.702 90.3907L214.714 0.211426L9.38565 16.1011Z" fill="#E31C24"/>
-      </svg>
-    </div>
-    <div class="lg:mt-44.5 ml-4.5 md:mx-10.5 flex flex-col lg:flex-row lg:justify-between space-y-10 font-medium md:mt-20.5 lg:text-2xl lg:gap-20">
-      <div class="grid grid-cols-1 gap-y-6 md:grid-cols-2 lg:grid-cols-2 lg:w-3xl">
-        <div>
-          <p>Agentur Baumeister</p>
-          <p>Böckhstraße 13</p>
-          <p>10967 Berlin</p>
-        </div>
-        <div class="md:text-right lg:text-left">
-          <a href="mailto:hallo@agentur-baumeister.com" class="underline">hallo@agentur-baumeister.com</a>
-          <p>+49 (0)30 - 490 827 87</p>
-        </div>
-      </div>
-      <nav class="pb-6 md:pb-9.5 mt-10 md:mt-0">
-        <ul class="flex gap-x-4 md:justify-between lg:gap-x-12 md:flex-row-reverse lg:flex-row-reverse lg:flex-wrap">
-          <li class="lg:order-4"><a href="privacy.html">Data privacy</a></li>
-          <li class="lg:order-1"><a href="imprint.html">Imprint</a></li>
-          <li class="md:order-4 lg:order-3"><a href="https://www.linkedin.com/company/agentur-baumeister/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-          <li class="md:order-3 lg:order-2"><a href="https://www.instagram.com/baumeister_agency" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-        </ul>
-      </nav>
-    </div>
-  </footer>
-
-  <script>
-    function initialiseMenu() {
-      const menuOpen = document.getElementById("menu-open");
-      const menuClose = document.getElementById("menu-close");
-      const mobileMenu = document.getElementById("mobile-menu");
-      const menuLinks = document.getElementById("menu-links");
-      let open = false;
-
-      function showMenu() {
-        menuOpen.classList.add("hidden");
-        menuClose.classList.remove("hidden");
-        mobileMenu.classList.remove("translate-x-full");
-        mobileMenu.classList.add("translate-x-0");
-      }
-      function hideMenu() {
-        menuOpen.classList.remove("hidden");
-        menuClose.classList.add("hidden");
-        mobileMenu.classList.add("translate-x-full");
-        mobileMenu.classList.remove("translate-x-0");
-      }
-      function handleMenuButtonClicked() {
-        open = !open;
-        open ? showMenu() : hideMenu();
-      }
-
-      if (menuOpen && menuClose) {
-        menuOpen.addEventListener("click", handleMenuButtonClicked);
-        menuClose.addEventListener("click", handleMenuButtonClicked);
-      }
-      menuLinks.addEventListener("click", hideMenu, true);
-    }
-    initialiseMenu();
-  </script>
+        window.onload = () => {
+            loadComponents('header', '../sections/header.html');
+            loadComponents('imprint', '../sections/imprintpage.html');
+            loadComponents('footer', '../sections/footer.html');
+        }
+    </script>
+    <div id="header"></div>
+    <div id="imprint"></div>
+    <div id="footer" class="text-[#00672E] bg-[#EFECEA]"></div>
 </body>
 </html>
