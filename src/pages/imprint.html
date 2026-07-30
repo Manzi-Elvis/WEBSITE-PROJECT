@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baumeister | Imprint</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>  
+</head>
+<body class="bg-[#EFECEA]">
+  <style type="text/tailwindcss">
+  @theme {
+    --font-sans: "Outfit";
+    --text-medium: 32px;
+    --color-green: #00672d;
+    --color-darkgreen: #00672e;
+    --color-background: transparent;
+  }
+  @layer base {
+    html, body {
+      @apply font-sans;
+    }
+  }
+</style>
+<script>
+        const loadComponents = (id, url) => {
+            fetch(url)
+            .then((response) => response.text())
+            .then((html) => {
+                document.getElementById(id).innerHTML = html;
+            });
+        }
+
+        window.onload = () => {
+            loadComponents('header', '../sections/header.html');
+            loadComponents('imprint', '../sections/imprintpage.html');
+            loadComponents('footer', '../sections/footer.html');
+        }
+    </script>
+    <div id="header"></div>
+    <div id="imprint"></div>
+    <div id="footer" class="text-[#00672E] bg-[#EFECEA]"></div>
+</body>
+</html>
