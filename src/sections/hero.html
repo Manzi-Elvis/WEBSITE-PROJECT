@@ -1,217 +1,55 @@
-<section>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #EFECEA;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    .main-content {
-      margin: 0;
-      padding: 0;
-      background: var(--bg);
-      font-family: "Outfit", "Helvetica Neue", Arial, sans-serif;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    .hero {
-      position: relative;
-      margin: 180px 0 100px;
-    }
-
-    @media (min-width: 768px) {
-      .hero {
-        margin: 112px 0 80px;
-      }
-    }
-
-    .hero-grid {
-      position: relative;
-      display: grid;
-      grid-template-columns: repeat(40, minmax(0, 1fr));
-      grid-template-rows: repeat(40, minmax(0, 1fr));
-      aspect-ratio: 1 / 1;
-      width: 100%;
-    }
-
-    @media (min-width: 1024px) {
-      .hero-grid {
-        aspect-ratio: 3 / 2;
-      }
-    }
-
-    .hero-grid>div {
-      width: 100%;
-      height: 100%;
-    }
-
-    .hero-grid svg {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-
-    .shape {
-      position: sticky;
-      top: 0;
-    }
-
-    .shape-pink {
-      grid-column: 26 / span 11;
-      grid-row: 2 / span 17;
-    }
-
-    .shape-yellow {
-      grid-column: 1 / span 30;
-      grid-row: 1 / span 34;
-    }
-
-    .shape-green2 {
-      grid-column: 24 / span 17;
-      grid-row: 10 / span 31;
-      position: static;
-    }
-
-    .shape-blue {
-      grid-column: 12 / span 27;
-      grid-row: 8 / span 24;
-    }
-
-    .shape-red {
-      grid-column: 9 / span 30;
-      grid-row: 21 / span 16;
-    }
-
-    .shape-green {
-      grid-column: 2 / span 22;
-      grid-row: 6 / span 21;
-    }
-
-    @media (min-width: 1024px) {
-      .shape-pink {
-        grid-column: 17 / span 7;
-        grid-row: 2 / span 17;
-      }
-
-      .shape-yellow {
-        grid-column: 1 / span 20;
-        grid-row: 1 / span 35;
-      }
-
-      .shape-green2 {
-        grid-column: 30 / span 11;
-        grid-row: 11 / span 29;
-      }
-
-      .shape-blue {
-        grid-column: 17 / span 20;
-        grid-row: 4 / span 27;
-        z-index: 10;
-      }
-
-      .shape-red {
-        grid-column: 6 / span 20;
-        grid-row: 21 / span 17;
-      }
-
-      .shape-green {
-        grid-column: 9 / span 15;
-        grid-row: 7 / span 23;
-      }
-    }
-
-    .hero-copy {
-      position: absolute;
-      inset: 0;
-      display: flex;
-    }
-
-    .hero-copy p {
-      margin: auto;
-      max-width: 224px;
-      text-align: center;
-      color: #fff;
-      font-weight: 500;
-      font-size: 24px;
-      line-height: 26px;
-    }
-
-    @media (min-width: 768px) {
-      .hero-copy p {
-        max-width: 320px;
-        font-size: 30px;
-        line-height: 36px;
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .hero-copy p {
-        position: relative;
-        z-index: 20;
-        max-width: 432px;
-        font-size: 48px;
-        line-height: 54px;
-      }
-    }
-  </style>
-
-  <body class="main-content">
-    <div class="hero">
-      <div class="hero-grid">
-        <div class="shape shape-pink">
-          <svg viewBox="0 0 98 156" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 27.889L41.5146 0L60.6742 1.46307L97.4019 115.957L52.692 155.595L0 27.889Z" fill="#FF93C8" />
-          </svg>
-        </div>
-
-        <div class="shape shape-yellow">
-          <svg viewBox="0 0 300 361" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M10.0633 233.845L120.153 8.50394L268.184 0L299.635 121.174L192.09 273.776L94.7609 360.505L0 360.385L0.0233488 286.398L10.0633 233.845Z"
-              fill="#FFE800" />
-          </svg>
-        </div>
-
-        <div class="shape-green2">
-          <svg viewBox="0 0 166 321" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M119.276 0L31.5731 37.7639L0 127.53L23.9378 245.568L167.564 320.477V56.3363L119.276 0Z"
-              fill="#00672E" />
-          </svg>
-        </div>
-
-        <div class="shape shape-blue">
-          <svg viewBox="0 0 267 250" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 151.194L113.944 250H197.18L267 113.398L241.844 0L143.983 2.8017L103.445 12.6022L0 151.194Z"
-              fill="#0F2CCE" />
-          </svg>
-        </div>
-
-        <div class="shape shape-red">
-          <svg viewBox="0 0 299 173" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M9.38565 16.1011L0.924896 91.0098L66.9601 160.347L241.541 172.728L298.702 90.3907L214.714 0.211426L9.38565 16.1011Z"
-              fill="#E31C24" />
-          </svg>
-        </div>
-
-        <div class="shape shape-green">
-          <svg viewBox="0 0 217 223" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M75.46 222.869L0 93.0198L34.9661 0L133.443 24.8704L216.265 143.667L173.008 219.185L75.46 222.869Z"
-              fill="#00672E" />
-          </svg>
-        </div>
+<body class="m-0 p-0 bg-[#EFECEA] font-[Outfit,'Helvetica_Neue',Arial,sans-serif]">
+  <div class="relative mt-[180px] mb-[100px] md:mt-[112px] md:mb-[80px]">
+    <div
+      class="relative grid w-full aspect-square lg:aspect-[3/2] grid-cols-[repeat(40,minmax(0,1fr))] grid-rows-[repeat(40,minmax(0,1fr))]">
+      <div class="sticky top-0 col-[26/span_11] row-[2/span_17] lg:col-[17/span_7] lg:row-[2/span_17] w-full h-full">
+        <svg viewBox="0 0 98 156" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 27.889L41.5146 0L60.6742 1.46307L97.4019 115.957L52.692 155.595L0 27.889Z" fill="#FF93C8" />
+        </svg>
       </div>
 
-      <div class="hero-copy">
-        <p>We help you set focus and gain impact. By adding to the conversation, not to the noise.</p>
+      <div class="sticky top-0 col-[1/span_30] row-[1/span_34] lg:col-[1/span_20] lg:row-[1/span_35]">
+        <svg viewBox="0 0 300 361" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M10.0633 233.845L120.153 8.50394L268.184 0L299.635 121.174L192.09 273.776L94.7609 360.505L0 360.385L0.0233488 286.398L10.0633 233.845Z"
+            fill="#FFE800" />
+        </svg>
+      </div>
+
+      <div class="static col-[24/span_17] row-[10/span_31] lg:col-[30/span_11] lg:row-[11/span_29]">
+        <svg viewBox="0 0 166 321" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M119.276 0L31.5731 37.7639L0 127.53L23.9378 245.568L167.564 320.477V56.3363L119.276 0Z"
+            fill="#00672E" />
+        </svg>
+      </div>
+
+      <div class="sticky top-0 col-[12/span_27] row-[8/span_24] lg:col-[17/span_20] lg:row-[4/span_27] lg:z-10">
+        <svg viewBox="0 0 267 250" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 151.194L113.944 250H197.18L267 113.398L241.844 0L143.983 2.8017L103.445 12.6022L0 151.194Z"
+            fill="#0F2CCE" />
+        </svg>
+      </div>
+
+      <div class="sticky top-0 col-[9/span_30] row-[21/span_16] lg:col-[6/span_20] lg:row-[21/span_17]">
+        <svg viewBox="0 0 299 173" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M9.38565 16.1011L0.924896 91.0098L66.9601 160.347L241.541 172.728L298.702 90.3907L214.714 0.211426L9.38565 16.1011Z"
+            fill="#E31C24" />
+        </svg>
+      </div>
+
+      <div class="sticky top-0 col-[2/span_22] row-[6/span_21] lg:col-[9/span_15] lg:row-[7/span_23]">
+        <svg viewBox="0 0 217 223" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M75.46 222.869L0 93.0198L34.9661 0L133.443 24.8704L216.265 143.667L173.008 219.185L75.46 222.869Z"
+            fill="#00672E" />
+        </svg>
       </div>
     </div>
-
-  </body>
-</section>
+    <div class="absolute inset-0 flex">
+      <p
+        class="m-auto max-w-[224px] text-center text-white font-medium text-[24px] leading-[26px] md:max-w-[320px] md:text-[30px] md:leading-[36px] lg:relative lg:z-20 lg:max-w-[432px] lg:text-[48px] lg:leading-[54px]">
+        We help you set focus and gain impact. By adding to the conversation, not to the noise.
+      </p>
+    </div>
+  </div>
+</body>
