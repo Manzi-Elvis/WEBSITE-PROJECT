@@ -1,4 +1,62 @@
-<div>
-    <h1 class="text-blue-800">Header</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam.</p>
-</div>
+<header
+  id="site-header"
+  class="fixed top-0 left-0 z-50 w-screen md:top-5 lg:block lg:top-5 lg:py-0
+         text-[32px] font-[outfit] font-bold
+         h-[100px] md:h-[140px] lg:h-[104px]
+         flex items-center "
+>
+  <nav class="flex items-center justify-between w-full  px-6 lg:text-[32px] lg:flex lg:items-start">
+    
+
+    <div class="h-[48px] w-[32px] z-20">
+      <ul class="text-[15px] font-light md:text-[24px]">
+        <li class="w-[32px] h-[26px] block md:w-[41px] md:h-[35px] lg:block lg:w-[26px] lg:h-[26px]">DE</li>
+        <li class="w-[32px] h-[26px] block md:w-[41px] md:h-[35px] lg:block lg:w-[26px] lg:h-[26px]">EN</li>
+      </ul>
+    </div>
+
+
+    <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center items-center z-[100]">
+      <img src="images/whites.png" alt="" class=" w-[194px] h-[50px]  absolute -z-10 block md:hidden" >
+      <h1 class="text-[36px] md:text-[48px] font-semibold z-50">Baumeister</h1>
+    </div>
+
+
+    <div class="lg:hidden cursor-pointer z-20">
+      <img
+        src="/images/menu.png"
+        alt="menu"
+        class="w-[39px] h-[23px] md:w-[63px] md:h-[37px]"
+        id="menu-btn"
+        onclick="const menu = document.getElementById('mobile-menu'); menu.classList.toggle('hidden'); this.src = menu.classList.contains('hidden') ? 'images/menu.png' : 'images/Black_menuX.png';"
+      />
+    </div>
+
+
+    <div class="hidden lg:block lg:text-[24px] lg:h-[104] lg:[204px]">
+      <ul class="font-normal  ">
+        <li class="h-[26px]"><a href="#about">About</a></li>
+        <li class="h-[26px]"><a href="#services">Services</a></li>
+        <li class="h-[26px]"><a href="#references">Reference</a></li>
+        <li class="h-[26px]"><a href="DataPrivacy.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div
+    class="hidden justify-center items-center text-center text-green-900
+           lg:hidden text-[24px] md:text-[48px] h-[404px] md:my-12
+           absolute top-full left-0 w-full "
+    id="mobile-menu"
+  >
+    <ul class="h-full flex flex-col justify-around items-center text-[32px] font-semibold  lg:text-[25px] mt-16">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#references">References</a></li>
+      <li><a href="../DataPrivacy.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<div class="h-[100px] md:h-[140px] lg:h-[154px]"></div>
